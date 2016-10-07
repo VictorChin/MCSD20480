@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Welcome</title>
+    <style>
+        h1 {
+            color: pink !important;
+        }
+    </style>
+    <link href="site.css" rel="stylesheet" />
+</head>
+<body>
+    <h1 id="welcome" class="muppet cool">Welcome</h1>
+    <p class="cool">Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.</p>
+    <p class="cool muppet">Placerat suscipit, orci nisl iaculis eros, a tincidunt nisi odio eget lorem nulla condimentum tempor mattis ut vitae feugiat augue cras ut metus a risus iaculis scelerisque eu ac ante.</p>
+    <p id="welcome">Fusce non varius purus aenean nec magna felis fusce vestibulum velit mollis odio sollicitudin lacinia aliquam posuere, sapien elementum lobortis tincidunt, turpis dui ornare nisl, sollicitudin interdum turpis nunc eget.</p>
+    <p>Sem nulla eu ultricies orci praesent id augue nec lorem pretium congue sit amet ac nunc fusce iaculis lorem eu diam hendrerit at mattis purus dignissim vivamus mauris tellus, fringilla.</p>
+    <p>Vel dapibus a, blandit quis erat vivamus elementum aliquam luctus etiam fringilla pretium sem vitae sodales mauris id nulla est praesent laoreet, metus vel auctor aliquam, eros purus vulputate leo.</p>
+
+   
+    <input type="button" onclick="button1_click()" value="Click Me" />
+
+    <script>
+        function button1_click() {
+            if (confirm("Would you like to add an X to the heading?")) {
+                welcome.innerText += "X";
+            }
+        }
+    </script>
+    <noscript>
+        <h4>Warning! You must enable JavaScript!</h4>
+    </noscript>
+</body>
+</html>

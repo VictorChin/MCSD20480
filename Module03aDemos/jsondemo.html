@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <h1>JSON Demo</h1>
+    <script>
+        // Object Literal Notation (OLN)
+        var p1 = { name: "Bob", age: 23 };
+
+        console.log(p1.name + " is " + p1.age);
+
+        var p1AsJson = JSON.stringify(p1);
+
+        // JavaScript Object Notation is a serialization format
+        console.log(p1AsJson);
+
+        var p2 = JSON.parse(p1AsJson);
+        console.log(p2.name + " is " + p2.age);
+
+    </script>
+</body>
+</html>

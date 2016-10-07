@@ -1,0 +1,76 @@
+﻿<div class="jumbotron">
+    <h1>Calling a web service</h1>
+    <select id="namesListBox" size="5"></select><br/>
+    <button type="button" id="populateListButton">Populate Names</button><br/>
+    Enter an index for a name to retrieve: <input id="indexTextBox" type="number"/>
+    <button type="button" id="getNameButton">Get Name</button>
+    <span id="nameDisplay"></span>
+    Enter a new name: <input id="newNameTextBox"/>
+    <button type="button" id="insertNameButton">Insert Name</button>
+</div>
+@section scripts {
+<script>
+    insertNameButton.onclick = function () {
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) { // complete response has arrived
+                var type = xhr.getResponseHeader("Content-Type");
+                switch (type) {
+                    case "application/json; charset=utf-8":
+                        var message = JSON.parse(xhr.responseText);
+                        $(nameDisplay).text(message);
+                        break;
+                    default:
+                        alert("Wrong content type! " + type);
+                }
+            }
+        }
+        xhr.open("POST", "/api/values");
+        xhr.setRequestHeader("Content-Type", "application/json; charset=utf-8");
+        xhr.send(JSON.stringify(newNameTextBox.value));
+    }
+    getNameButton.onclick = function () {
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+            console.log("readyState: " + xhr.readyState);
+            if (xhr.readyState === 4) { // complete response has arrived
+                var type = xhr.getResponseHeader("Content-Type");
+                switch (type) {
+                    case "application/json; charset=utf-8":
+                        var message = JSON.parse(xhr.responseText);
+                        //nameDisplay.innerText = message;
+                        $(nameDisplay).text(message);
+                        break;
+                    default:
+                        alert("Wrong content type! " + type);
+                }
+            }
+        }
+        xhr.open("GET", "/api/values/" + indexTextBox.value);
+        xhr.send();
+    }
+    populateListButton.onclick = function () {
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+            console.log("readyState: " + xhr.readyState);
+            if (xhr.readyState === 4) { // complete response has arrived
+                var type = xhr.getResponseHeader("Content-Type");
+                switch(type) {
+                    case "application/json; charset=utf-8":
+                        $(namesListBox).html("");
+                        var arrayOfNames = JSON.parse(xhr.responseText);
+                        arrayOfNames.forEach(function (name) {
+                            $(namesListBox).append(
+                                "<option>" + name + "</option>");
+                        });
+                        break;
+                    default:
+                        alert("Wrong content type! " + type);
+                }
+            }
+        }
+        xhr.open("GET", "/api/values");
+        xhr.send();
+    }
+</script>
+}

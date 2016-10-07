@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>CSS Transitions</title>
+    <style>
+        div {
+            margin: 2rem;
+            padding: 2rem;
+            background-color: yellow;
+            font-size: 4em;
+            width: 300px;
+            -moz-transition-property: width, background-color, font-size;
+            -o-transition-property: width, background-color, font-size;
+            -webkit-transition-property: width, background-color, font-size;
+            transition-property: width, background-color, font-size;
+            -moz-transition-duration: 0.5s;
+            -o-transition-duration: 0.5s;
+            -webkit-transition-duration: 0.5s;
+            transition-duration: 0.5s;
+            -moz-transition-timing-function: ease-out;
+            -o-transition-timing-function: ease-out;
+            -webkit-transition-timing-function: ease-out;
+            transition-timing-function: ease-out;
+            -moz-transition-delay: 1s;
+            -o-transition-delay: 1s;
+            -webkit-transition-delay: 1s;
+            transition-delay: 1s;
+        }
+            div:hover {
+                background-color: orange;
+                width: 500px;
+                font-size: 2em;
+                -moz-transition: width ease-in 2s, background-color linear 2s, font-size ease-out 2s;
+                -o-transition: width ease-in 2s, background-color linear 2s, font-size ease-out 2s;
+                -webkit-transition: width ease-in 2s, background-color linear 2s, font-size ease-out 2s;
+                transition: width ease-in 2s, background-color linear 2s, font-size ease-out 2s;
+            }
+    </style>
+</head>
+<body>
+    <div>
+        Apples
+    </div>
+</body>
+</html>

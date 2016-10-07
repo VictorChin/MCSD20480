@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+ 
+</head>
+<body>
+    <h1>Bubbling and Capturing Events</h1>
+    <div id="toolbar"></div>
+    <script>
+        var toolbar = document.getElementById("toolbar");
+        for (var i = 0; i < 26; i++) {
+            var button = document.createElement("input");
+            button.type = "button";
+            button.value = String.fromCharCode(65 + i);
+            button.id = button.value + "Button";
+            toolbar.appendChild(button);
+        }
+
+        toolbar.addEventListener("click", function (e) {
+            console.log("toolbar_click - capturing");
+            console.log("e.currentTarget.id: " + e.currentTarget.id);
+            console.log("e.target.id: " + e.target.id);
+        }, true);
+
+        toolbar.addEventListener("click", function (e) {
+            console.log("toolbar_click - bubbling");
+            console.log("e.currentTarget.id: " + e.currentTarget.id);
+            console.log("e.target.id: " + e.target.id);
+        }, false);
+
+        document.getElementById("AButton").addEventListener("click",
+            function (e) {
+                console.log("AButton_click");
+                console.log("e.currentTarget.id: " + e.currentTarget.id);
+                console.log("e.target.id: " + e.target.id);
+                //e.stopPropagation(); // prevent bubbling
+            });
+    </script>
+</body>
+</html>

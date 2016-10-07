@@ -1,0 +1,23 @@
+﻿.cool {
+    background-color: yellowgreen;
+}
+.muppet {
+    text-decoration: underline;
+    background-color: pink;
+}
+p.cool#goodbye {
+    font-size: 40px;
+}
+#welcome {
+    font-style: italic;
+    font-family: Tahoma;
+}
+body {
+    font-family: Arial, 'Times New Roman', serif;
+    -moz-column-count: 4;
+    -webkit-column-count: 4;
+    column-count: 4;
+}
+h1 {
+    color: green;
+}

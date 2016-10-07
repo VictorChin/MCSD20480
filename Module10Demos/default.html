@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+        h1 {
+            color: navy;
+            text-shadow: 2px 2px 2px green;
+        }
+
+        @media print {
+            h1 {
+                color:black;
+                text-shadow: none;
+            }
+            a::after {
+                content: " [" attr(href) "]";
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Module 10</h1>
+    <p>
+        <a href="http://www.apple.com/">Apple Corp</a>
+    </p>
+</body>
+</html>

@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <h1>Reference Element on the Page</h1>
+    <input type="button" id="clickMeButton" value="Click Me" />
+    <input id="nameTextBox" />
+    <form id="myform">
+        <input id="ageTextBox" />
+    </form>
+    <script>
+        clickMeButton.onclick = function () {
+            alert(nameTextBox.value + " is " + myform.ageTextBox.value);
+            alert(document.getElementById("ageTextBox").value);
+        }
+
+
+    </script>
+</body>
+</html>

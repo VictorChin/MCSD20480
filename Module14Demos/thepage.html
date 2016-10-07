@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>The Page</title>
+</head>
+<body>
+    <h1>The Page</h1>
+    <input id="number" type="number" value="3" /> <input id="task" value="DOUBLE" />
+    <input type="button" value="Post Message" id="postMessageButton" />
+    <input type="button" value="Start Booing" id="startButton" />
+    <input type="button" value="Stop Booing" id="stopButton" />
+    <ul id="output"></ul>
+    <script>
+        var theWorker = new Worker("theworker.js");
+        function sayBoo() {
+            var li = document.createElement("li");
+            li.innerText = "Boo!";
+            output.appendChild(li);
+        }
+        var id;
+        startButton.onclick = function () {
+            id = setInterval(sayBoo, 600);
+        }
+        stopButton.onclick = function () {
+            clearInterval(id);
+        }
+
+        theWorker.onerror = function (e) {
+            var li = document.createElement("li");
+            li.innerText = "Error: " + e.message + " in "
+                + e.filename + " on line " + e.lineno;
+            output.appendChild(li);
+        }
+        theWorker.onmessage = function (e) {
+            var li = document.createElement("li");
+            li.innerText = "Result: " + e.data.result;
+            output.appendChild(li);
+        }
+        postMessageButton.onclick = function () {
+            theWorker.postMessage({ task: task.value, number: number.value });
+        }
+    </script>
+</body>
+</html>

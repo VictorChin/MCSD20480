@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <h1>Object Types</h1>
+    <script>
+        // regular expressions
+        var a = new RegExp("^[0-9]+$"); // constructor syntax
+        var b = /[0-9]+/; // literal syntax
+
+        // strings
+        var c = new String("Hello");
+        var d = "Hello";
+
+        // arrays
+        var e = new Array(3);
+        e.push("Apples");
+        e.push("Bananas");
+        e.push("Cherries");
+        var f = ["Apples", "Bananas", "Cherries"];
+
+        // objects
+        var g = new Object();
+        g.firstName = "Bob";
+        g.age = 43;
+        var h = { firstName: "Bob", age: 43 };
+
+        var specialday = new Date(2016, 11, 25);
+        console.log(specialday);
+
+        console.log(typeof a);
+        console.log(typeof b);
+        console.log(typeof c);
+        console.log(typeof d);
+        console.log(typeof e);
+        console.log(typeof f);
+        console.log(typeof g);
+        console.log(typeof h);
+
+        console.log(getSubType(a));
+        console.log(getSubType(b));
+        console.log(getSubType(c));
+        console.log(getSubType(d));
+        console.log(getSubType(e));
+        console.log(getSubType(f));
+        console.log(getSubType(g));
+        console.log(getSubType(h));
+
+        console.log(Math.PI + ", " + Math.random());
+
+        function getSubType(o) {
+            if (o === undefined) return "Undefined";
+            if (o === null) return "Null";
+            return Object.prototype.toString.call(o).slice(8, -1);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style>
+        div {
+            background-color: lightgoldenrodyellow;
+            padding: 20px;
+        }
+            div:hover {
+                -moz-transition: transform 2s;
+                -o-transition: transform 2s;
+                -webkit-transition: transform 2s;
+                transition: transform 2s;
+                -moz-transform: scale(1.5,1.5) rotate(20deg);
+                -ms-transform: scale(1.5,1.5) rotate(20deg);
+                -o-transform: scale(1.5,1.5) rotate(20deg);
+                -webkit-transform: scale(1.5,1.5) rotate(20deg);
+                transform: scale(1.5,1.5) rotate(20deg);
+            }
+        div::first-line {
+            font-style: italic;
+        }
+        div::first-letter {
+            font-size: 3em;
+            float: left;
+            margin: 0 6px 0 0;
+        }
+        a {
+            text-decoration: none;
+            color: navy;
+        }
+            a:hover {
+                text-decoration: underline;
+                color: green;
+                -moz-transform: rotate(30deg);
+                -ms-transform: rotate(30deg);
+                -o-transform: rotate(30deg);
+                -webkit-transform: rotate(30deg);
+                transform: rotate(30deg);
+            }
+    </style>
+</head>
+<body>
+    <h1>Pseudo-Elements (sub-elements)</h1>
+    <div>
+        Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.
+    </div>
+    <h1>Pseudo-Classes (states an element can have)</h1>
+    <div>
+        <a href="http://www.apple.com/">Go to Apple's web site</a>.
+        Tincidunt integer eu augue augue nunc elit dolor, luctus placerat scelerisque euismod, iaculis eu lacus nunc mi elit, vehicula ut laoreet ac, aliquam sit amet justo nunc tempor, metus vel.
+    </div>
+</body>
+</html>

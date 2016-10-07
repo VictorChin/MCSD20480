@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <h1>Objects and Namespaces</h1>
+    <script>
+        var person = {
+            firstName: "Alice",
+            age: 42,
+            haveBirthday: function () {
+                this.age++;
+            },
+            "": "Haha",
+            "! \\": "This is weird",
+            "for": "JavaScript keyword!"
+        };
+
+        var Firebrand = {
+            title: "This is the Firebrand namespace",
+            salesTax: function (amount) {
+                return amount * 0.2;
+            }
+        };
+
+        console.log(person.firstName + " is " + person.age);
+        person.haveBirthday();
+        console.log(person.firstName + " is " + person.age);
+
+        console.log(Firebrand.title + " can calculate sales tax: " +
+            Firebrand.salesTax(100));
+
+        console.log("Enumerating properties of person:")
+        for (var item in person) {
+            console.log("  " + item + " has value: " + person[item]);
+        }
+
+        console.log(person.for + ", " + person["! \\"]);
+
+        //person.salesTax = function () { };
+
+        Object.prototype.salesTax = function () { };
+
+        person.salesTax();
+
+    </script>
+</body>
+</html>

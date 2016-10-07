@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <h1>Events Demo</h1>
+    <input type="button" value="A" onclick="AButton_click(); alert('here!');" />
+    <input type="button" value="B" id="BButton" />
+    <input type="button" value="C" id="CButton" />
+    <input type="button" value="D" id="DButton" />
+    <script>
+        function AButton_click() {
+            alert("A");
+        }
+
+        function kermit() { alert("Kermit!");}
+
+        BButton.onclick = function () {
+            alert("B");
+            DButton.removeEventListener("click", AButton_click);
+        }
+
+        CButton.onclick = AButton_click; // reference to the function, NOT executing it!
+
+        DButton.addEventListener("click", AButton_click);
+        DButton.addEventListener("click", kermit);
+    </script>
+</body>
+</html>

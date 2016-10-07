@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <h1>Geo</h1>
+    <p>IE on Windows Server does not allow permission. Use Chrome instead.</p>
+    <button type="button" id="getLocationButton">Get Location Now</button>
+    <ul id="list"></ul>
+    <svg style="background-color:silver;">
+        <rect x="10" y="10" fill="red" width="100" height="80" rx="10" ry="40" />
+    </svg>
+    <script src="Scripts/jquery-2.2.0.js"></script>
+    <script>
+        getLocationButton.onclick = function () {
+            navigator.geolocation.getCurrentPosition(successCallback,
+                failedCallback, { enableHighAccuracy: true, timeout: 2000 });
+        }
+
+        function successCallback(e) {
+            $(list).append("<li>Lat: " + e.coords.latitude
+                + ", Long: " + e.coords.longitude + "</li>");
+
+            //var li = document.createElement("li");
+            //li.innerText = "Lat: " + e.coords.latitude + ", Long: " + e.coords.longitude;
+            //list.appendChild(li);
+        }
+
+        function failedCallback(e) {
+            var li = document.createElement("li");
+            li.innerText = "Error: " + e.message;
+            list.appendChild(li);
+        }
+    </script>
+</body>
+</html>

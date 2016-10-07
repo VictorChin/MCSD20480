@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <h1 id="heading">Welcome</h1>
+    <div>
+        <input type="text" value="Bob" id="nameTextBox" />
+    </div>
+    <div>
+        <input type="button" value="Show" id="showButton" />
+        <input type="button" value="Hide" id="hideButton" /><br />
+        <input type="button" value="Remove" id="removeButton" />
+        <input type="button" value="Add Back" id="addBackButton" /><br />
+        <input type="button" value="Enable" id="enableButton" />
+        <input type="button" value="Diable" id="disableButton" />
+    </div>
+    <form id="fred">
+        <a id="bob">Bob</a>
+        <input id="alice" />
+    </form>
+    <script>
+        showButton.onclick = function () { heading.style.visibility = "visible"; }
+        hideButton.onclick = function () { heading.style.visibility = "hidden"; }
+        removeButton.onclick = function () { heading.style.display = "none"; }
+        addBackButton.onclick = function () { heading.style.display = "block"; }
+        enableButton.onclick = function () { nameTextBox.disabled = false; }
+        disableButton.onclick = function () { nameTextBox.disabled = true; }
+    </script>
+</body>
+</html>

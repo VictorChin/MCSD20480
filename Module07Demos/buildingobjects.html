@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <h1>Building Objects</h1>
+    <script>
+        var ba1 = {
+            accname: "Mr. Jones",
+            balance: 150,
+            withdraw: function (amount) { this.balance -= amount; },
+            toString: function () {
+                return this.accname
+                    + " has balance of " + this.balance
+            }
+        };
+        console.log(ba1);
+        ba1.withdraw(30);
+        console.log(ba1);
+
+        var ba2 = {
+            accountname: "Mrs. Smith",
+            balance: 250,
+            withdraw: function (amount) { this.balance -= amount; },
+            toString: function () {
+                return this.accname
+                    + " has balance of " + this.balance
+            }
+        };
+        // factory function
+        function createBankAccount(accountName, initialBalance) {
+            var newba = Object.create(sharedMethods);
+            newba.accname = accountName;
+            newba.balance = initialBalance;
+            return newba;
+        }
+        var sharedMethods = {
+            withdraw: function (amount) { this.balance -= amount; },
+            toString: function () {
+                return this.accname
+                    + " has balance of " + this.balance
+            }
+        }
+
+        var ba3 = createBankAccount("Jones", 1000);
+        var ba4 = createBankAccount("Smith", 2000);
+        console.log(ba3);
+        console.log(ba4);
+
+        // constructor function
+        function BankAccount(accountName, initialBalance) {
+            // this = Object.create(BankAccount.prototype);
+            this.accname = accountName;
+            this.balance = initialBalance;
+            // return this;
+        }
+        BankAccount.prototype = {
+            constructor: BankAccount,
+            withdraw: function (amount) { this.balance -= amount; },
+            toString: function () {
+                return this.accname
+                    + " has balance of " + this.balance
+            }
+        }
+
+        var ba5 = new BankAccount("Jones", 1000);
+        var ba6 = new BankAccount("Smith", 2000);
+        console.log(ba5);
+        console.log(ba6);
+    </script>
+</body>
+</html>

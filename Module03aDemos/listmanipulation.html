@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <h1>List Manipulation</h1>
+    <ol id="theList">
+        <li>Aberdeen</li>
+        <li>Birmingham</li>
+    </ol>
+    <input id="newCity" /> <input type="button" value="Add" id="addCityButton" />
+    <script>
+        addCityButton.onclick = function() {
+            var item = document.createElement("li");
+            item.innerText = newCity.value;
+            theList.insertBefore(item, theList.firstChild);
+            newCity.value = "";
+            newCity.focus();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <h1>Overriding</h1>
+    <script>
+        var a = {
+            x: 3
+        };
+
+        var b = Object.create(a);
+        b.y = 4;
+
+        console.log("a.x = " + a.x);
+        console.log("b.x = " + b.x);
+        console.log("b.y = " + b.y);
+
+        b.x = 5;
+
+        console.log("a.x = " + a.x);
+        console.log("b.x = " + b.x);
+        console.log("b.y = " + b.y);
+
+        delete b.x;
+
+        console.log("a.x = " + a.x);
+        console.log("b.x = " + b.x);
+        console.log("b.y = " + b.y);
+
+        delete Object.getPrototypeOf(b).x;
+    </script>
+</body>
+</html>

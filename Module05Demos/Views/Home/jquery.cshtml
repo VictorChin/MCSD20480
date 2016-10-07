@@ -1,0 +1,37 @@
+﻿<div class="jumbotron">
+    <h1>Calling a web service using jQuery</h1>
+    <select id="namesListBox" size="5"></select><br/>
+    <button type="button" id="populateListButton">Populate Names</button><br/>
+    Enter an index for a name to retrieve: <input id="indexTextBox" type="number"/>
+    <button type="button" id="getNameButton">Get Name</button>
+    <span id="nameDisplay"></span>
+    Enter a new name: <input id="newNameTextBox"/>
+    <button type="button" id="insertNameButton">Insert Name</button>
+</div>
+@section scripts {
+<script>
+    $(populateListButton).on("click", function () {
+        $.ajax({
+            url: "/api/values",
+            dataType: "json" // expected return type
+        }).done(function (arrayOfNames) {
+            arrayOfNames.forEach(function (name) {
+                $(namesListBox).append("<option>" + name + "</option>");
+            });
+        }).fail(function (error) {
+            alert("Something went wrong!");
+        });
+    });
+    $(insertNameButton).on("click", function () {
+        $.ajax({
+            type: "POST",
+            url: "/api/values",
+            contentType: "application/json; charset=utf-8",
+            dataType: "json", // expected return type
+            data: JSON.stringify(newNameTextBox.value)
+        }).done(function (message) {
+            alert(message);
+        });
+    });
+</script>
+}

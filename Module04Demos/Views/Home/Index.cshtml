@@ -1,0 +1,53 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h1>POSTing Form Inputs</h1>
+    <form method="post" action="/home/params" autocomplete="on" id="myform">
+        Color: <input list="colors" autofocus="autofocus" placeholder="Enter your fav color" name="color" required="required" /><br />
+        Age: <input name="age" type="number" max="100" min="18" /><br />
+        DOB: <input name="dob" type="date" /><br />
+        Employee Code: <input name="empcode" placeholder="3 letters and 2 digits" required="required" pattern="[A-Z]{3}[0-9]{2}"
+                              title="Must be three upper letters and two digits!" /><br />
+
+        <label for="pwd">Password:</label> <input accesskey="p" name="password" autocomplete="off" type="password" id="pwd" /><br />
+
+        Range: <select name="agerange" size="1">
+            <optgroup label="Children">
+                <option value="0">Baby</option>
+                <option value="1">Toddler</option>
+                <option value="2">Child</option>
+                <option value="3">Teen</option>
+            </optgroup>
+            <optgroup label="Adult">
+                <option value="4">Adult</option>
+                <option value="5">Senior</option>
+            </optgroup>
+        </select><br />
+        <input type="submit" />
+    </form>
+    <datalist id="colors">
+        <option value="Red">#FF0000</option>
+        <option value="Blue" />
+        <option value="Green" />
+        <option value="Yellow" />
+        <option value="Orange" />
+    </datalist>
+</div>
+@section scripts {
+    <script>
+        myform.onsubmit = function () {
+            // return true to allow the submit, return false to cancel
+            return confirm("Do you want to submit?");
+        }
+
+        myform.color.oninput = function () {
+            if (myform.color.value.indexOf("z") != -1) {
+                myform.color.setCustomValidity("You cannot use z in a color!");
+            } else {
+                myform.color.setCustomValidity("");
+            }
+        }
+    </script>
+}

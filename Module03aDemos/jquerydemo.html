@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script src="Scripts/jquery-1.7.1.js"></script>
+    <script>
+        
+        $(function () {
+            // wait for DOM to be ready before running these statements
+
+            $("h1").css("color", "red")
+                .click(function () { alert("clicked!"); });
+
+            $("#clickMeButton").click(function () {
+                $("h1").css("background-color", "pink").append("X");
+            });
+
+            //$(clickMeButton).
+
+            // clickMeButton.onclick = function () { };
+
+            $(":button").css("color", "red");
+        });
+    </script>
+</head>
+<body>
+    <h1>jQuery Demo</h1>
+    <input type="button" id="clickMeButton" value="Click Me" />
+    <input type="submit" id="clickMeButton2" value="Click Me" />
+    <input type="reset" id="clickMeButton3" value="Click Me" />
+
+    <button type="button" id="mybutton">shdghdhkjg<br />skjgfdgfdsjh</button>
+    <button type="submit" id="mybutton2">shdghdhkjg<br />skjgfdgfdsjh</button>
+    <button type="reset" id="mybutton3">shdghdhkjg<br />skjgfdgfdsjh</button>
+</body>
+</html>
