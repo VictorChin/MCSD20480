@@ -69,6 +69,7 @@
     <Content Include="alpha.js" />
     <Content Include="beta.js" />
     <Content Include="bubblingandcapturing.html" />
+    <Content Include="CallingContext.html" />
     <Content Include="eventsdemo.html" />
     <Content Include="functiondemos.html" />
     <Content Include="jquerydemo.html" />
@@ -80,7 +81,7 @@
     <Content Include="RegEx.html" />
     <Content Include="replacingfunctions.html" />
     <Content Include="packages.config" />
-    <None Include="Scripts\jquery-1.7.1-vsdoc.js" />
+    <None Include="Scripts\jquery-1.7.1-intelli.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
     <Content Include="Scripts\regexSample.js" />

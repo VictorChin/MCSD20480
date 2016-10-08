@@ -1,4 +1,7 @@
-﻿function TestDemo(re, teststring) {
+﻿/// <reference path="jquery-1.7.1-intelli.js" />
+
+function TestDemo(re, teststring) {
+   $.ajax()
     var somethingElse;
     var another;
     // Test string for existence of regular expression.
