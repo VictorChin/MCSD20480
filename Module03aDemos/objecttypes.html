@@ -6,6 +6,19 @@
 <body>
     <h1>Object Types</h1>
     <script>
+        function ShowResults(value, index, ar,param4) {
+            document.write("value: " + value);
+            document.write(" index: " + index);
+            document.write("<br />");
+            document.write('*******' + this)
+            return function (value, index, ar, param4) {
+                document.write("inner func: " + value);
+                document.write(" inner func: " + index);
+                document.write("<br />");
+                document.write('*******' + this);
+            }
+        }
+
         // regular expressions
         var a = new RegExp("^[0-9]+$"); // constructor syntax
         var b = /[0-9]+/; // literal syntax
@@ -20,7 +33,7 @@
         e.push("Bananas");
         e.push("Cherries");
         var f = ["Apples", "Bananas", "Cherries"];
-
+        f.forEach(ShowResults(),"test");
         // objects
         var g = new Object();
         g.firstName = "Bob";
