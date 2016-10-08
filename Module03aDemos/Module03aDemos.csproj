@@ -19,6 +19,7 @@
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -76,11 +77,13 @@
     <Content Include="listmanipulation.html" />
     <Content Include="objecttypes.html" />
     <Content Include="referenceelement.html" />
+    <Content Include="RegEx.html" />
     <Content Include="replacingfunctions.html" />
     <Content Include="packages.config" />
     <None Include="Scripts\jquery-1.7.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />
     <Content Include="Scripts\jquery-1.7.1.min.js" />
+    <Content Include="Scripts\regexSample.js" />
     <Content Include="simplejs.html" />
     <Content Include="Web.config" />
   </ItemGroup>
