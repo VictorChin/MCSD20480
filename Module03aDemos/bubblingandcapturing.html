@@ -21,6 +21,7 @@
             console.log("toolbar_click - capturing");
             console.log("e.currentTarget.id: " + e.currentTarget.id);
             console.log("e.target.id: " + e.target.id);
+            e.stopPropagation();
         }, true);
 
         toolbar.addEventListener("click", function (e) {
@@ -34,7 +35,7 @@
                 console.log("AButton_click");
                 console.log("e.currentTarget.id: " + e.currentTarget.id);
                 console.log("e.target.id: " + e.target.id);
-                //e.stopPropagation(); // prevent bubbling
+              
             });
     </script>
 </body>
