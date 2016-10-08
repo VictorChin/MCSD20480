@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <svg xmlns="http://www.w3.org/2000/svg" width="200" height="200">
+        <defs>
+            <linearGradient id="Gradient1">
+                <stop id="stop1" offset="0%" stop-color="Red" />
+                <stop id="stop2" offset="50%" stop-color="blue" />
+                <stop id="stop3" offset="100%" stop-color="Green" />
+            </linearGradient>
+            <radialGradient id="RadialGradient2" cx="0" cy="0" r="1">
+                <stop offset="0%" stop-color="red" />
+                <stop offset="100%" stop-color="blue" />
+            </radialGradient>
+        </defs>
+        <circle cx="100" cy="100" r="50" fill="url(#RadialGradient2)" stroke="green" stroke-width="10"
+                
+                ></circle>
+
+    </svg>
+
+    <svg width="300" height="200" 
+     viewBox="-1 -1 2 2"
+     style="background-color: lightgray;">
+  <rect x="0" y="0" width="0.75" 
+        height="0.5" fill="red" />
+</svg>
+<canvas id="testCanvas" width="200" height="200" style="border:5px solid red"></canvas>
+    <script>    
+        var _canvas = document.getElementById('testCanvas');
+        var ctx = _canvas.getContext('2d');
+        ctx.moveTo(50, 50);
+        ctx.lineTo(100, 100);
+        ctx.strokeStyle = 'red';
+        ctx.stroke();
+        ctx.moveTo(50,50);
+        ctx.arc(50, 50, 50, 0, Math.PI / 180 * 45);
+        ctx.strokeStyle = 'blue';
+        ctx.fillStyle = 'red';
+        ctx.stroke();
+        ctx.fill();
+        ctx.font = "30px Arial";
+        ctx.strokeText('Hello World', 50, 50);
+        ctx.rotate(Math.PI/180 * 30);
+        ctx.strokeText('Hello World', 50, 50);
+        ctx.rotate(Math.PI / 180 * -35);
+        ctx.strokeText('Hello World', 50, 50);
+    </script>
+</body>
+</html>
