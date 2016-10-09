@@ -41,7 +41,6 @@
                 // TODO: Add grayscaleImage into the processing pipeline.
                 this.readFile(file)
                     .pipe(this.loadImage)
-                    .pipe(grayscaleImage)
                     .done(this.drawBadge, this.notBusy);
             } else {
                 alert("Please drop an image file.");
