@@ -8,33 +8,29 @@
     <script>
         function VAT(amount) {
             var localVar = 45;
-
             return amount * 0.2;
         }
         var number;
-        function doStuff(fruit, howMany) {
+        function doStuff( fruit, howMany) {
             console.log("doStuff is running...");
             console.log("There are " + arguments.length + " arguments.");
             console.log("The first argument is " + arguments[0]);
             console.log("The second argument is " + arguments[1]);
+            console.log("The third argument is " + arguments[2]);
             console.log("The fruit argument is " + fruit);
             console.log("The howMany argument is " + howMany);
         }
 
         doStuff(); // execute the function
         console.log("doStuff expects " + doStuff.length + " arguments.");
-        doStuff("Apples", 3);
+        doStuff("Apples", 3,"Numba3");
 
         number = 4;
 
         console.log(VAT(100));
 
-        var myfunc = function () {
 
-        }
-
-        for (; true;)
-            ;
+  
 
     </script>
 </body>

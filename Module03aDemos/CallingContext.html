@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <script>    
+        function showPerson(color, size)
+        {
+            console.log(this.name + ' is ' + this.age);
+            console.log(color + '  and ' + size);
+        }
+        var bob = { name: 'bob', age: 42 };
+        var tom = { name: 'tom', age: 45 };
+        showPerson("red", 5);
+        showPerson.apply(bob, ['red', 5]);
+        showPerson.call(tom, 'blue', 8);
+        var f1 = showPerson.bind(bob);
+        var f2 = showPerson.bind(tom);
+        f1('ABC', 10);
+        f2('XYZ', 20);
+    </script>
+</body>
+</html>

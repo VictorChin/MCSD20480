@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Module01Demos", "Module01Demos\Module01Demos.csproj", "{C3F32FB7-1F2D-49D6-AD3C-8D8AE3024EF9}"
 EndProject
@@ -24,6 +24,12 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Module12Demos", "Module12Demos\Module12Demos.csproj", "{3BDBC2AE-4FB8-4FBC-A03C-5DCE6FDB141B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Module07Demos", "Module07Demos\Module07Demos.csproj", "{5DC7451F-49E8-40EB-92C1-FC7BCB19A8B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Module11Demos", "Module11Demos\Module11Demos.csproj", "{077B52DC-2FC7-41BB-A837-9C241E509B65}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Module3B", "Module3B\Module3B.csproj", "{F3AB913A-C193-46B5-BA41-912AC8C30CAB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Module13Demos", "Module13Demos\Module13Demos.csproj", "{F8CC895B-3C2A-4115-B02D-C9569D1B6627}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +81,18 @@ Global
 		{5DC7451F-49E8-40EB-92C1-FC7BCB19A8B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5DC7451F-49E8-40EB-92C1-FC7BCB19A8B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5DC7451F-49E8-40EB-92C1-FC7BCB19A8B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{077B52DC-2FC7-41BB-A837-9C241E509B65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{077B52DC-2FC7-41BB-A837-9C241E509B65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{077B52DC-2FC7-41BB-A837-9C241E509B65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{077B52DC-2FC7-41BB-A837-9C241E509B65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3AB913A-C193-46B5-BA41-912AC8C30CAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3AB913A-C193-46B5-BA41-912AC8C30CAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3AB913A-C193-46B5-BA41-912AC8C30CAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3AB913A-C193-46B5-BA41-912AC8C30CAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8CC895B-3C2A-4115-B02D-C9569D1B6627}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8CC895B-3C2A-4115-B02D-C9569D1B6627}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8CC895B-3C2A-4115-B02D-C9569D1B6627}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8CC895B-3C2A-4115-B02D-C9569D1B6627}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

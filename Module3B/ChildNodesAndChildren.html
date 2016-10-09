@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <ol id="list">
+        <li>Apples</li>
+        <li>Bananas</li>
+    </ol>
+
+    <script>
+        console.log(list.childNodes.length);
+        for (var i = 0; i < list.childNodes.length; i++) {
+            console.log("  " + list.childNodes[i].textContent);
+        }
+        console.log("--------------------------")
+        for (var i = 0; i < list.children.length; i++) {
+            console.log("  " + list.children[i].textContent);
+        }
+
+    </script>
+    
+
+</body>
+</html>

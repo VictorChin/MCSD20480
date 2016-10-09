@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Threading;
 using System.Web.Http;
 
 namespace Module05Demos.Controllers
@@ -31,6 +32,7 @@ namespace Module05Demos.Controllers
         public string Post([FromBody]string value)
         {
             names.Add(value);
+            Thread.Sleep(3000);
             return "I inserted: " + value;
         }
 

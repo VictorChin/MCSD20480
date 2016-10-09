@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="Scripts/regexSample.js"></script>
+</head>
+<body>
+    <script>
+        var somethingElse = 'Outer value';
+        console.log(TestDemo(/^[a-z]/, 'abcdefg'));
+        var d_today = new Date();
+        console.log(d_today);
+        console.log(d_today.getFullYear());
+        var bob = new Object;
+        bob.age = 42;
+        bob.name = "bob";
+        console.log(bob.name + bob.age.toString());
+
+        var n = 10;
+        var m = 5;
+        Number.prototype.square = function () { return this * this; };
+        console.log(n.square());
+        console.log(m.square());
+    </script>
+</body>
+</html>

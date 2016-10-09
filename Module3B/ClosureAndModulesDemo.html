@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <script>
+        var myApp = (function () {
+
+            var id = 10;
+
+            return {
+                //ID: function() {return id},
+                next: function () {
+                    return ++id;
+                },
+
+                reset: function () {
+                    id = 0;
+                    return "id reset";
+                }
+            };
+        })();
+
+        console.log(myApp.next());
+        console.log(myApp.reset());
+        console.log(myApp.next());
+
+        var A= (function (param) {
+
+            var id = param;
+
+            return {
+                //ID: function() {return id},
+                next: function () {
+                    return ++id;
+                },
+
+                reset: function () {
+                    id = 0;
+                    return "id reset";
+                }
+            };
+        })(100);
+        console.log(A.next());
+        console.log(A.reset());
+        console.log(A.next());
+
+        var B = (function (param) {
+            var id = function () { return param * 2}();
+            return {
+                //ID: function() {return id},
+                next: function () {
+                    return ++id;
+                },
+
+                reset: function () {
+                    id = 0;
+                    return "id reset";
+                }
+            };
+        })(150);
+        console.log(B.next());
+        console.log(B.reset());
+        console.log(B.next());
+
+    </script>
+</body>
+</html>
