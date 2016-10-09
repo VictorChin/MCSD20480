@@ -94,6 +94,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ObjectConstructor.html" />
     <Content Include="packages.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -107,7 +108,6 @@
     <Content Include="ClosureAndModulesDemo.html" />
     <Content Include="scripts\ai.0.22.19-build00125.js" />
     <Content Include="scripts\ai.0.22.19-build00125.min.js" />
-    <Content Include="scripts\jquery-1.7.1.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
