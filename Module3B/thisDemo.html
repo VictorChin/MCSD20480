@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+
+<body>
+
+   <button id="btn" onclick="doSomething.call(this,window);">Here</button>
+    <script>
+    function doSomething(obj) {
+    console.log('clicked: ' + this);
+    }
+    doSomething(); //this refer to window
+    var btn = document.getElementById("btn");
+    //btn.addEventListener("click", doSomething);
+
+    </script>
+</body>
+</html>

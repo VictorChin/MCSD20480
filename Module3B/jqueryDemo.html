@@ -19,31 +19,64 @@
                 .each(function (idx) { this.textContent = "MyButton" + idx });
             var listID = 0;
             $('input[value="Click Me"]').addClass("ClickMeButton")
-                .on("click", function () { listID++; $('#myList').append("<li>Item " +listID +"</li>"); });
-            $('li').live("click", function () { $(this).remove(); });
+                .on("click", function () { listID++; $('#myList').append("<li>Item " + listID + "</li>"); });
+
+            $('li').on("click", function () { $(this).remove(); });
             $(somethingElse).click(
                 function () { $(this).animate({ opacity: 0.5, fontSize: "3em" }) })
             .mouseleave( function () { $(this).animate({ opacity: 1, fontSize: "1em" }) })
             ;
+            $("div").first();
+            
+ 
         });
     </script>
     <style>
         .ClickMeButton { font-weight:500;font-size:larger;}
         .ClickMeButton:hover { font-weight:500;font-size:larger;text-decoration:underline;background-color:burlywood;}
         .lists > li {background-color:lavenderblush;margin:0.5em; width: 10rem;  }
+        
     </style>
 </head>
 <body>
     <h1>jQuery Demo</h1>
-    <input type="button" id="clickMeButton" value="Click Me" />
-    <input type="submit" id="clickMeButton2" value="Click Me" />
-    <input type="reset" id="clickMeButton3" value="Click Me" />
-    <button type="button" id="mybutton">default</button>
+
+
+        <input type="button" id="clickMeButton" value="Click Me" />
+        <input type="submit" id="clickMeButton2" value="Click Me" />
+        <input type="reset" id="clickMeButton3" value="Click Me" />
+        <input type="reset" id="clickMeButton4" value="Don't Click Me" />
+    <button type="button" id="mybutton1">default</button>
     <button type="submit" id="mybutton2">default</button>
     <button type="reset" id="mybutton3">default</button>
+    <button type="button" id="mybutton4">default</button>
+    <button type="submit" id="mybutton5">default</button>
+    <button type="reset" id="mybutton6">default</button>
+    <button type="button" id="yourbutton4">yourbutton4</button>
+    <button type="submit" id="yourbutton5">yourbutton5</button>
+     <button type="reset" id="yourbutton6">yourbutton6</button> 
     <div id="somethingElse">DivElement</div>
  
     <ol id="myList" class="lists">
     </ol>
+
+    <div>
+        <ol>
+            <li>Item1</li>
+            <li>Item2</li>
+        </ol>
+    </div>
+    <div>
+        <ol>
+            <li>Item1</li>
+            <li>Item2</li>
+        </ol>
+    </div>
+    <div>
+        <ol>
+            <li>Item1</li>
+            <li>Item2</li>
+        </ol>
+    </div>
 </body>
 </html>
